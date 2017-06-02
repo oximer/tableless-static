@@ -1,3 +1,21 @@
+---
+title: Indo além no Mundo React-Native.
+author: Jose Urbano Duarte Junior
+type: post
+image: https://cdn-images-1.medium.com/max/1000/1*M0bDjag4DJovh0imf9nYKQ.png
+date: 2017-05-24
+excerpt: Nesse artigo vou sair do óbvio e apresentar algumas coisas possíveis de se realizar com o React Native 
+url: /indo-alem-no-react-native/
+categories:
+  - JavaScript
+  - Mobile
+  - Tecnologia e Tendências
+  - Código
+tags:
+  - ReactNative
+  - Android
+---
+
 # Indo além no Mundo React-Native.
 Nos últimos meses resolvi aprofundar meus estudos no React Native. Após anos trabalhando apenas com desenvolvimento mobile nativo, um grande amigo me convenceu a experimentar esse novo framework.
 Confesso que até então, eu era um pouco reticente sobre frameworks que prometem entregar aplicativos nas duas plataformas (iOS e Android) a partir de um código único. Minha experiência com Cordova me dizia que isso não funcionava bem. A perfomance era sempre pobre e frustrante.
@@ -30,6 +48,7 @@ Após concluir a edição do App 2, vamos para a modificação do aplicativo "Ap
 Primeiro abra a pasta "android" do projeto 1 no Android Studio. Pegue o arquivo "app2.jsbundle" e o coloque dentro da pasta "assests" do projeto.
 Agora vamos criar uma View que irá conter o App 1 e o App 2.
 
+```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -67,11 +86,12 @@ protected void onCreate(Bundle savedInstanceState) {
     FrameLayout frameLayout = (FrameLayout) findViewById(R.id.app2);
     frameLayout.addView(app2RootView);
 }
+```
 
 Feito isso, volte para o mundo JS. Modifique o Aplicativo 1 e o empacote de maneira semelhante ao App2. Também, o coloque dentro da pasta "assets"
 react-native bundle — platform android — dev false — entry-file app1.js — bundle-output app1.jsbundle
-Resultado Final
 
+## Resultado Final
 
 ---
 
